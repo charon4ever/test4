@@ -1,0 +1,201 @@
+body {
+    /* padding-top: 20px; */
+    /* padding-bottom: 20px; */
+    /* background-color: #eee; */
+}
+
+td {
+    word-break: break-word;
+}
+
+.black_overlay {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+
+.white_content {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 25%;
+    width: 50%;
+    height: 500px;
+    background-color: white;
+    z-index: 1002;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.white_content_small {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    height: 50%;
+    border: 16px solid lightblue;
+    background-color: white;
+    z-index: 1002;
+    overflow: auto;
+}
+
+.disabled {
+    pointer-events:none;
+}
+
+/*loading*/
+/*https://www.w3schools.com/howto/howto_css_loader.asp*/
+
+
+.col-align {
+    float: none;
+    display: inline-block;
+}
+.col-align--top {
+    vertical-align: top;
+}
+.col-align--center {
+    vertical-align: middle;
+}
+.col-align--bottom {
+    vertical-align: bottom;
+}
+
+.v-center {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.v-center-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 888;
+}
+
+/* Center the loader */
+#loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin-left: -60px;
+    margin-top: -60px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #D71221;
+    border-right: 16px solid #003378;
+    border-bottom: 16px solid #006D77;
+    z-index: 888;
+
+    -webkit-animation: spin 2s linear infinite;
+    -ms-transform: translate(-50%, -50%);
+    animation: spin 2s linear infinite;
+}
+
+#loader.animate {
+
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 }
+    to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+    from{ bottom:-100px; opacity:0 }
+    to{ bottom:0; opacity:1 }
+}
+
+footer.main-footer {
+    text-align: center;
+}
+
+ul.sidebar-menu li.treeview.active {
+    font-size: 18px;
+}
+
+#poupPanelModal .modal-dialog {
+    margin-top: 100px;
+}
+
+#poupPanelModal .modal-title {
+    padding: 15px 15px 5px;
+}
+
+#poupPanelModal .modal-dialog .list-group .list-group-item {
+    font-size: 16px;
+}
+
+#poupPanelModal .modal-dialog .list-group .list-group-item .value {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* --------------- FOOTER ------------------ */
+#footer {
+    position: fixed;
+    bottom: 10px;
+    border-top: 1px solid #ccc;
+    padding: 0 0 1px 0;
+    background: transparent;
+    color: #999;
+    width: 100%;
+}
+
+#footer div#copyright {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 1em 5px .5em;
+    overflow: hidden;
+}
+
+#footer p {
+    margin: 5px 10px;
+    text-align: center;
+    font-size: 13px;
+    color: white;
+}
+
+#footer p a {
+    outline: none;
+    text-decoration: none;
+    color: #72afd2;
+}
+
