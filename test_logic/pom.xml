@@ -26,6 +26,11 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>wcy</groupId>
+            <artifactId>test_dao</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -1,6 +1,7 @@
 package dao.mapper;
 
 import dao.model.User;
+import org.springframework.stereotype.Repository;
 
 public interface UserMapper {
     /**

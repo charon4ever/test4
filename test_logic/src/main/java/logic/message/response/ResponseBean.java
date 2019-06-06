@@ -16,8 +16,10 @@ public class ResponseBean<T> {
         this.data = data;
     }
 
-    public ResponseBean(NibException e) {
-
+    public ResponseBean(Throwable e) {
+        NibException error = (NibException) e;
+        this.responseCode = error.getInternalServiceId() + error.getErrorInfo().getErrorCode();
+        this.message = error.getErrorInfo().getErrorMessage();
     }
 
 

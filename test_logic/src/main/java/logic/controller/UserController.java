@@ -13,16 +13,16 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class UserController {
 
-    UserService userServiceImpl;
+    private UserService userServiceImpl;
 
     @RequestMapping(value = "/doLogin", produces = "application/json;charset=UTF-8")
-    public String login(HttpServletRequest request, AdminInfoRequest adminInfo) {
+    public ResponseBean<String> login(HttpServletRequest request, AdminInfoRequest adminInfo) {
         try {
             userServiceImpl.validateUser(request, adminInfo);
-        } catch (Exception e) {
-
+        } catch (Throwable e) {
+            return new ResponseBean<>(e);
         }
-        return "";
+        return new ResponseBean<>();
     }
 
     @RequestMapping(value = "/login")
@@ -31,7 +31,7 @@ public class UserController {
         if (session.getAttribute("user") != null) {
             return "forward:main";
         } else {
-            return "src/main/webapp/WEB-INF/views/login.jsp";
+            return "login";
         }
     }
 
@@ -41,7 +41,22 @@ public class UserController {
         return new ResponseBean<>(captcha);
     }
 
-//    public ResponseBean<String> register(HttpServletRequest request, RegisterInfoRequest registerInfo) {
-//
-//    }
+
+    @RequestMapping(value = "/register")
+    public String getRegisterPage(HttpServletRequest request) {
+        request.setAttribute("viewPage","registerModal.jsp");
+        return "login";
+    }
+
+
+    @RequestMapping(value = "/doRegister",produces = "application/json;charset=UTF-8")
+    public ResponseBean<String> register(HttpServletRequest request, RegisterInfoRequest registerInfo) {
+        try{
+            userServiceImpl.registerUser(request, registerInfo);
+        }catch (Exception e){
+            return new ResponseBean<>(e);
+        }
+
+        return new ResponseBean<>();
+    }
 }
