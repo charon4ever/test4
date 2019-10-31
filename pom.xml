@@ -22,7 +22,7 @@
         <aspectj.version>1.8.9</aspectj.version>
         <servlet-api-version>2.5</servlet-api-version>
         <jstl.version>1.2</jstl.version>
-        <c3p0-version>0.9.5.1</c3p0-version>
+        <c3p0-version>0.9.5.4</c3p0-version>
         <mybatis.version>3.2.8</mybatis.version>
         <mybatis-spring-version>1.2.2</mybatis-spring-version>
         <mysql-connector-java-version>5.1.30</mysql-connector-java-version>
