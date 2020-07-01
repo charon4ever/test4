@@ -25,7 +25,7 @@
         <c3p0-version>0.9.5.1</c3p0-version>
         <mybatis.version>3.2.8</mybatis.version>
         <mybatis-spring-version>1.2.2</mybatis-spring-version>
-        <mysql-connector-java-version>5.1.30</mysql-connector-java-version>
+        <mysql-connector-java-version>8.0.16</mysql-connector-java-version>
         <plexus.compiler.javac.version>2.2</plexus.compiler.javac.version>
     </properties>
 
